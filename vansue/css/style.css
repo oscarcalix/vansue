@@ -1,0 +1,281 @@
+:root {
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+
+    --primario: #784d3c;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233, 187, 2);
+    --blanco: #ffffff;
+    --rosado: rgb(255, 192, 203);
+    --grisClaro: rgb(211, 211, 211);
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: auto;
+}
+/*Globales*/
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4.0rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+/*Utilidades*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+/*Header*/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+.header{
+    background-image: url(../img/banner.jpg);
+}
+.header{
+    position: relative; /* Posicionar el header para usar la pseudo-clase ::before */
+    background-image: url(../img/banner.webp);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0 0 0 / 65%); /* Capa oscura con opacidad del 50% */
+    z-index: 1; /* Para que la sombra esté encima del banner */
+}
+.header__texto{
+    position: relative; /* Aseguramos que el texto esté encima de la sombra */
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+    z-index: 2; /* Para que el texto esté por encima de la sombra */
+}
+
+@media (min-width: 768px) { 
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+.barra{
+    padding-top: 4rem;
+}
+@media (min-width: 768px) { 
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo{
+    color: var(--blanco);
+}
+.logo__nombre{
+    position: relative; /* Aseguramos que el texto esté encima de la sombra */
+    font-weight: 400;
+    z-index: 2; /* Para que el texto esté por encima de la sombra */
+}
+.bold   {
+    font-weight: bold;
+}
+.navegacion{
+    position: relative; /* Aseguramos que el texto esté encima de la sombra */
+    z-index: 2; /* Para que el texto esté por encima de la sombra */
+}
+@media (min-width: 768px) { 
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+/*FOOTER*/
+.footer{
+    background-color: var(--rosado);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+/*Sobre nosotros*/
+@media (min-width: 768px) { 
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+/*PAGINA DE productos*/
+.grid{
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) { 
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    }
+}
+
+.producto {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd; /* Borde para destacar cada producto */
+}
+
+.producto__imagen {
+    width: 200px; /* Ancho fijo para todas las imágenes */
+    height: 200px; /* Alto fijo para todas las imágenes */
+    object-fit: cover; /* Recorta o escala la imagen para que se ajuste */
+}
+
+.producto__informacion {
+    margin-top: 10px;
+}
+/*PRODUCTOS*/
+.header-productos{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+}
+/*INFORMACION*/
+.enlaces{
+    text-align: center;
+}
+.enlaces-informacion{
+    height: 30rem;
+    margin-bottom: 50rem;
+}
+@media (min-width: 768px) { 
+    .enlaces-informacion{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 768px) { 
+    .enlaces-contenedor{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 100rem;
+        margin: 0 0 0 5rem;
+        gap: 5rem;
+    }
+}
+.imagen-enlaces{
+    width: 20rem;
+    height: 20rem;
+}
+@media (min-width: 768px) { 
+    .enlaces-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.iconos-container{
+    display: flex;
+    gap: 2.1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.icono{
+    text-align: center;
+}
+.icono-nombre{
+    font-size: 1.2rem;
+    /*margin-bottom: 0.5rem;*/
+    font-weight: bold;
+}
+.enlaces-link{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+@media (min-width: 768px) { 
+    .enlaces-link{
+        margin-right: 20rem;
+    }
+}
+
+/*.btn-whatsapp {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366;  Color de WhatsApp 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}*/
+.btn-whatsapp{
+    padding: 1rem 2rem;
+    background-color: #25D366;
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+.btn-whatsapp:hover{
+    background-color: #128C7E;
+}
+
+
+
