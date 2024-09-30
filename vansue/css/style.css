@@ -144,7 +144,7 @@ img{
 .footer{
     background-color: var(--rosado);
     padding-bottom: 3rem;
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
 }
 /*Sobre nosotros*/
 @media (min-width: 768px) { 
@@ -276,6 +276,11 @@ img{
 .btn-whatsapp:hover{
     background-color: #128C7E;
 }
-
+/*footer*/  
+.derechos{
+    text-align: center;
+    margin: 2rem;
+    height: 4rem;
+}
 
 
