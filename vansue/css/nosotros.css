@@ -1,0 +1,27 @@
+/*Sobre nosotros*/
+.comprar__titulo{
+    text-align: center;
+}
+@media (min-width: 768px) { 
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) { 
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.bloque{
+    text-align: center;
+}
+.bloque__titulo{
+    margin: 0;
+}
