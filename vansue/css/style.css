@@ -69,9 +69,7 @@ img{
 .no-webp .header{
     background-image: url(../img/banner.jpg);
 }
-.header{
-    background-image: url(../img/banner.jpg);
-}
+
 .header{
     position: relative; /* Posicionar el header para usar la pseudo-clase ::before */
     background-image: url(../img/banner.webp);
